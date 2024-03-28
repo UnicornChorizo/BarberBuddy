@@ -1,0 +1,35 @@
+.navbar {
+    height: 84px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+    color: #94A3B8;
+}
+
+.icon-name {
+    width: 93.75px;
+    height: 15px;
+    gap: 0px;
+    opacity: 0px;
+
+    font-family: 'Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.12px;
+    text-align: center;
+    color: #94A3B8;
+
+}
