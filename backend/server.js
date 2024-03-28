@@ -84,7 +84,7 @@ app.post('/api/appointments', async (req, res) => {
 
     // Check if the requested time is within working hours
     const workingHours = { start: '09:00', end: '17:00' };
-    if (startTime.substring(11, 16) < workingHours.start || endTime.substring(11, 16) > workingHours.end) {
+    if (startTime.substring(11, 16) < workingHours.start || endTime.substring(11, 16) >= workingHours.end) {
         return res.status(400).send('Appointment time is outside of working hours.');
     }
 
