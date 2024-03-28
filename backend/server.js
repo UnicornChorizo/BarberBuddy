@@ -223,6 +223,42 @@ app.delete('/api/barbers/:barberId', async (req, res) => {
     }
 });
 
+const { OAuth2Client } = require('google-auth-library');
+const client = new OAuth2Client('933435364177-9vakpd8sn04u9irhmiv67aanfvdispbh.apps.googleusercontent.com'); // Replace CLIENT_ID with your Google client ID
+
+app.post('/api/auth/google', async (req, res) => {
+    const { token } = req.body;
+
+    try {
+        // Verify the ID token
+        const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: '933435364177-9vakpd8sn04u9irhmiv67aanfvdispbh.apps.googleusercontent.com',
+        });
+        const payload = ticket.getPayload();
+
+        // Check for an existing user
+        const { rows } = await pool.query('SELECT * FROM users WHERE google_id = $1', [payload['sub']]);
+
+        let user;
+        if (rows.length === 0) {
+            // Create a new user
+            const newUser = await pool.query(
+                'INSERT INTO users (google_id, name, email) VALUES ($1, $2, $3) RETURNING *',
+                [payload['sub'], payload['name'], payload['email']]
+            );
+            user = newUser.rows[0];
+        } else {
+            // Existing user
+            user = rows[0];
+        }
+
+        // Respond with user information (you might also include a session token or similar)
+        res.json(user);
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
+});
 
 // Start the server
 app.listen(port, () => {
