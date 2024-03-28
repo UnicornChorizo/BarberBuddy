@@ -1,5 +1,56 @@
 .App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
   text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+}
+
+main {
+  padding-top: 20px;
+}
+
+.barber-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.barber-list li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.barber-list li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.barber-list li a:hover {
+  background-color: #f4f4f4;
 }
 
 .App-logo {
