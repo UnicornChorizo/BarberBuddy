@@ -6,6 +6,8 @@ import TimeSlotPicker from './components/TimeSlotPicker';
 import AppointmentConfirmation from './components/AppointmentConfirmation';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
+import BarberSelection from './components/BarberSelection';
+import ServiceSelection from './components/ServiceSelection';
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
                 <Route path="/services" element={<ServiceList />} />
                 <Route path="/timeslots" element={<TimeSlotPicker />} />
                 <Route path="/confirm" element={<AppointmentConfirmation />} />
+
             </Routes>
         </Router>
     );
