@@ -5,7 +5,7 @@ const pool = new Pool({
     host: 'localhost',
     database: 'barberbuddy_db',
     password: 'Unicorn98',
-    port: 5432,
+    port: 3000, //Change back to 5432
 });
 
 module.exports = pool;

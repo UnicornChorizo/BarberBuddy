@@ -1,0 +1,51 @@
+header {
+    width: Fixed (375px)px;
+    height: Fixed (91px)px;
+    left: -1px;
+    padding: 0px 0px 16px 0px;
+    gap: 8px;
+    opacity: 0px;
+    background: #14B8A6;
+
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HomePage-name,
+.BarberShop-name {
+    margin: 0;
+}
+
+.HomePage-name {
+    width: 150px;
+    height: 29px;
+    gap: 0px;
+    opacity: 0px;
+    padding-top: 20px;
+
+    margin: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.5px;
+    text-align: left;
+}
+
+.BarberShop-name {
+    width: 103px;
+    height: 24px;
+    gap: 0px;
+    opacity: 0px;
+    padding-top: 20px;
+
+    margin: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.5px;
+    text-align: left;
+}
