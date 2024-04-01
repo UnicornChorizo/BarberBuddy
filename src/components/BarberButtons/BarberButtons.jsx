@@ -41,25 +41,29 @@ const BarberButtons = () => {
   ];
 
   return (
-    <div className="barber-buttons">
-      {barbers.map(barber => (
-        <div key={barber.id} className="barber-card">
-          <img src={barber.image} alt={barber.name} className="barber-image" />
-          <div className="barber-info">
-            <h3 className="barber-name">{barber.name}</h3>
-            <div className="barber-details">
-              <div className="barbershop-location">
-                <img src={Location} alt="Location Pin" className="pin-drop-icon" />
-                <p className="barbershop-name">{barber.barbershop}</p>
-              </div>
-              <div className="barber-rating">
-                <img src={Star} alt="Rating Star" className="rating-icon" />
-                <p className="rating">{barber.rating} ({barber.nor})</p>
+    <div className="barber-buttons-container">
+      <div className="top-barber-padding"></div>
+      <div className="barber-buttons">
+        {barbers.map(barber => (
+          <div key={barber.id} className="barber-card">
+            <img src={barber.image} alt={barber.name} className="barber-image" />
+            <div className="barber-info">
+              <h3 className="barber-name">{barber.name}</h3>
+              <div className="barber-details">
+                <div className="barbershop-location">
+                  <img src={Location} alt="Location Pin" className="pin-drop-icon" />
+                  <p className="barbershop-name">{barber.barbershop}</p>
+                </div>
+                <div className="barber-rating">
+                  <img src={Star} alt="Rating Star" className="rating-icon" />
+                  <p className="rating">{barber.rating} ({barber.nor})</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <div className="bottom-padding"></div>
     </div>
   );
 }

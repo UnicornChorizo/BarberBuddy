@@ -2,15 +2,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+.barber-buttons-container {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.top-barber-padding {
+    padding: 10px;
+}
+
 .barber-buttons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
+    padding: 0, 10px;
 }
 
 .barber-card {
     text-align: center;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .barber-image {
@@ -59,4 +73,8 @@
     height: 13.33px;
     margin-right: 5px;
     display: inline;
+}
+
+.barber-padding {
+    height: 84px;
 }

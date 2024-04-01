@@ -1,24 +1,21 @@
 import React from 'react';
-import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
-import BarberList from './components/BarberList';
-import ServiceList from './components/ServiceList';
-import TimeSlotPicker from './components/TimeSlotPicker';
-import AppointmentConfirmation from './components/AppointmentConfirmation';
-import './App.css';
-import {Header, BarberButtons, Navbar, Footer} from "./components"
-
-function BarberPage() {
-    return null;
-}
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import Booking from './components/BookingPage/Booking';
+import Profile from './components/UserProfilePage/Profile';
+import HomePage from './components/Home/Home';
+import { Header, BarberButtons, Navbar, Footer } from "./components"
 
 const App = () => {
-    return(
-        <>
-            <Header />
-            <BarberButtons />
-            <Navbar />
-            <Footer />
-        </>
+    return (
+        <Router>
+            <div>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/booking" element={<Booking />} />
+                    <Route path="/profile" element={<Profile />} />
+                </Routes>
+            </div>
+        </Router>
     );
 };
 
