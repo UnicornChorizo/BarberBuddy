@@ -4,9 +4,9 @@ import "./Navbar.css";
 import HomeIcon from '../../assets/HomeIcon.svg';
 import BookingIcon from '../../assets/CalendarIcon.svg';
 import ProfileIcon from '../../assets/UserIcon.svg';
-import Home from '../Home/Home';
-import Booking from '../BookingPage/Booking';
-import Profile from '../UserProfilePage/Profile';
+// import Home from '../Home/Home';
+// import Booking from '../BookingPage/Booking';
+// import Profile from '../UserProfilePage/Profile';
 
 const Navbar = () => {
   return (

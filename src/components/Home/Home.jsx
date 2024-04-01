@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Header, BarberButtons, Navbar, Footer } from "../../components"
+import { Header, BarberButtons, Navbar} from "../../components"
 
 const HomePage = () => {
     return (
